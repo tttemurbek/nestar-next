@@ -25,7 +25,7 @@ const TrendProperties = (props: TrendPropertiesProps) => {
 	const [trendProperties, setTrendProperties] = useState<Property[]>([]);
 
 	/** APOLLO REQUESTS **/
-	const [LikeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
+	const [likeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
 
 	const {
 		loading: getPropertiesLoading,
@@ -48,7 +48,7 @@ const TrendProperties = (props: TrendPropertiesProps) => {
 			if (!user._id) throw new Error(Message.NOT_AUTHENTICATED);
 
 			//execute likePropertyHandler
-			await LikeTargetProperty({ variables: { input: id } });
+			await likeTargetProperty({ variables: { input: id } });
 
 			// execute getPropertiesRefetch
 			await getPropertiesRefetch({ input: initialInput });

@@ -37,7 +37,7 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 	const [filterSortName, setFilterSortName] = useState('New');
 
 	/** APOLLO REQUESTS **/
-	const [LikeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
+	const [likeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
 
 	const {
 		loading: getPropertiesLoading,
@@ -77,7 +77,7 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 			if (!user._id) throw new Error(Message.NOT_AUTHENTICATED);
 
 			//execute likePropertyHandler
-			await LikeTargetProperty({ variables: { input: id } });
+			await likeTargetProperty({ variables: { input: id } });
 
 			// execute getPropertiesRefetch
 			await getPropertiesRefetch({ input: initialInput });
