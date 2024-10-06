@@ -15,7 +15,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 interface CommunityCardProps {
   boardArticle: BoardArticle;
   size?: string;
-  likeArticleHandler: any;
+  likeArticleHandler: any; 
 }
 
 const CommunityCard = (props: CommunityCardProps) => {
