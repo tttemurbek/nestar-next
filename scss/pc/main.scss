@@ -605,6 +605,14 @@ body::-webkit-scrollbar {
             border-radius: 20px 20px 20px 0px;
             color: #fff;
           }
+          .msg-right {
+            padding: 9px;
+            width: auto;
+            height: auto;
+            display: flex;
+            background: #d0ece8;
+            border-radius: 20px 20px 0px 20px;
+          }
         }
       }
       .chat-bott {
@@ -642,14 +650,6 @@ body::-webkit-scrollbar {
           background: #33c1c1;
           border: none;
         }
-      }
-      .msg-right {
-        padding: 9px;
-        width: auto;
-        height: auto;
-        display: flex;
-        background: #d0ece8;
-        border-radius: 20px 20px 0px 20px;
       }
     }
   }
