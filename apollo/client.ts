@@ -35,7 +35,7 @@ class LoggingWebSocket {
   private socket: WebSocket;
 
   constructor(url: string) {
-    this.socket = new WebSocket(`${url}?token=${getJwtToken}`);
+    this.socket = new WebSocket(`${url}?token=${getJwtToken()}`);
     socketVar(this.socket);
 
     this.socket.onopen = () => {
